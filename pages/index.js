@@ -4,7 +4,9 @@ import Header from "../components/Header";
 import {useState} from "react";
 
 export default function Home() {
-    const [someInputValue, setSomeInputValue] = useState("some text")
+    const firstText = "some text"
+    const [someInputValue, setSomeInputValue] = useState(firstText)
+    const [pictureText, setPictureText] = useState(firstText)
     return (<div>
             <Head>
                 <title>Create Next App</title>
@@ -12,8 +14,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <div>
-                <Header someValue={someInputValue} setSomeValue={setSomeInputValue} />
+                <Header someValue={someInputValue} setSomeValue={setSomeInputValue} setPictureText={setPictureText}/>
                 <h1>{someInputValue}</h1>
+                {/* added picture with relevant text */}
+                <img src={`https://cataas.com/cat/sad/says/${pictureText}`} />
             </div>
         </div>)
 }

@@ -1,5 +1,5 @@
 //someValue and setSomeValue called props
-export default function Header({someValue, setSomeValue}) {
+export default function Header({someValue, setSomeValue, setPictureText}) {
     return (
         <header>
             {/* e.target.value came from usual JS
@@ -30,8 +30,10 @@ export default function Header({someValue, setSomeValue}) {
                 or () => ...
             */}
             <input className='header-tag-search' value={someValue} onChange={(e) => setSomeValue(e.target.value)} />
-            {/* we will show our input in some other place */}
-            <p>{someValue}</p>
+            {/* we will add button to change picture because we can't send api req for every changed symbol */}
+            <buttom className='header-btn' onClick={() => {
+                setPictureText(someValue)
+            }}>Применить к картинке</buttom>
         </header>
     )
 }

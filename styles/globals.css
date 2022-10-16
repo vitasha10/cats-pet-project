@@ -24,3 +24,12 @@ header {
   text-align: center;
   line-height: calc(80px * 0.7);
 }
+.header-btn{
+  background: crimson;
+  color: aliceblue;
+  height: 60%;
+  line-height: calc(80px * 0.6);
+  padding: 0 20px 0 10px;
+  margin: 0 0 0 20px;
+  border-radius: 15px;
+}
