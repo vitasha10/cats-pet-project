@@ -1,14 +1,5 @@
-//it's something like import math in python
-import {useState} from "react";
-
-export default function Header(props) {
-    //by default, it's "some text", string
-    const [someInputValue, setSomeInputValue] = useState("some text")
-    /*
-    "className" but not class because it's React,
-    in pure css and html it would be just "class"
-    defaultValue because if you will put usual text in value u can't change that, you can try
-    */
+//someValue and setSomeValue called props
+export default function Header({someValue, setSomeValue}) {
     return (
         <header>
             {/* e.target.value came from usual JS
@@ -38,9 +29,9 @@ export default function Header(props) {
 
                 or () => ...
             */}
-            <input className='header-tag-search' value={someInputValue} onChange={(e) => setSomeInputValue(e.target.value)} />
+            <input className='header-tag-search' value={someValue} onChange={(e) => setSomeValue(e.target.value)} />
             {/* we will show our input in some other place */}
-            <p>{someInputValue}</p>
+            <p>{someValue}</p>
         </header>
     )
 }

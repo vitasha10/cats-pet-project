@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import '../styles/Home.module.css'
 import Header from "../components/Header";
+import {useState} from "react";
 
 export default function Home() {
+    const [someInputValue, setSomeInputValue] = useState("some text")
     return (<div>
             <Head>
                 <title>Create Next App</title>
@@ -10,7 +12,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <div>
-                <Header/>
+                <Header someValue={someInputValue} setSomeValue={setSomeInputValue} />
+                <h1>{someInputValue}</h1>
             </div>
         </div>)
 }
