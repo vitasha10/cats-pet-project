@@ -16,8 +16,8 @@ export default function Home() {
             <div>
                 <Header someValue={someInputValue} setSomeValue={setSomeInputValue} setPictureText={setPictureText}/>
                 <h1>{someInputValue}</h1>
-                {/* added picture with relevant text */}
-                <img src={`https://cataas.com/cat/sad/says/${pictureText}`} />
+                {/* deleted sad tag */}
+                <img src={`https://cataas.com/cat/says/${pictureText}`} />
             </div>
         </div>)
 }
